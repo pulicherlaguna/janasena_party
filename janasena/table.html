@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+<style>
+  .btn-info{
+        background-color: rgb(241, 241, 245);
+        border-radius: 5px;
+        font-size: 15px;
+      }
+      .btn-secondary{
+        background-color: rgb(131, 131, 134);
+        border-radius: 5px;
+        font-size: 15px;
+      }
+</style>
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Address</th>
+          <th>Age</th>
+          <th>Gender</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button type="button" onclick="back()" class="btn-info">
+      Goto back
+    </button>
+    <button type="button" onclick="web()" class="btn-secondary">
+      Goto Website
+    </button>
+    <script>
+      var allusers = JSON.parse(localStorage.getItem("allusers"));
+      console.log(allusers);
+      function displayUsers() {
+        document.querySelector("tbody").innerHTML = "";
+        allusers.forEach((usr) => {
+          var myTr = document.createElement("tr");
+          for (a in usr) {
+            var myTd = document.createElement("td");
+            myTd.innerHTML = usr[a];
+            myTr.appendChild(myTd);
+          }
+          document.querySelector("tbody").appendChild(myTr);
+        });
+      }
+
+      displayUsers();
+
+      function back() {
+        window.location.href = "form.html";
+      }
+      function web() {
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>

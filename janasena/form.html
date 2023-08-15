@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: aliceblue;
+      }
+      form {
+        max-width: 500px;
+        margin: 0 auto;
+        background: whitesmoke;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px black;
+
+      }
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      input.error {
+        border: 1px solid red;
+      }
+      .btn1{
+        background-color: rgb(62, 62, 239);
+        border-radius: 5px;
+        font-size: 15px;
+      }
+      .btn-info{
+        background-color: rgb(241, 241, 245);
+        border-radius: 5px;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="name">Name</label><br />
+      <input
+        type="text"
+        name=""
+        id="name"
+        placeholder="Name"
+        onkeyup="validate()"
+      /><br /><br />
+      <label for="email">Email</label><br />
+      <input
+        type="email"
+        name=""
+        id="email"
+        placeholder="Email"
+        onkeyup="validate()"
+      /><br /><br />
+      <label for="password">Password</label><br />
+      <input
+        type="password"
+        name=""
+        id="password"
+        placeholder="Password"
+        onkeyup="validate()"
+      /><br /><br />
+      <label for="address">Addree</label><br />
+      <input
+        type="address"
+        name=""
+        id="address"
+        placeholder="Addree"
+        onkeyup="validate()"
+      /><br /><br />
+      <label for="age">DOB</label><br />
+      <input type="date" name="" id="age" onkeyup="validate()" /><br />
+      <label for="gender">Gender</label><br />
+      <input type="radio" name="gender" value="male" />male
+      <input type="radio" name="gender" value="female" />Female
+      <input type="radio" name="gender" value="other" />Others <br /><br />
+      <br /><br />
+      <button class="btn1" type="button" onclick="adduser()">
+        Submit
+      </button>
+      <button type="button" onclick="website()" class="btn-info">
+        Goto Websitte
+      </button>
+    </form>
+    <br />
+    <hr />
+    <script>
+      var allradiobtn = document.getElementsByName("gender");
+      var allusers = JSON.parse(localStorage.getItem("allusers"));
+      console.log(allusers);
+      if (allusers == null) {
+        allusers = [];
+      }
+      function adduser() {
+        name = document.getElementById("name").value;
+        console.log(name);
+        var users = {
+          name: "",
+          email: "",
+          password: "",
+          address: "",
+          age: "",
+          gender: "",
+        };
+        for (a in users) {
+          if (a !== "gender") {
+            users[a] = document.getElementById(a).value;
+            console.log(users);
+          } else if (a == "gender") {
+            allradiobtn.forEach((rb) => {
+              if (rb.checked) {
+                users.gender = rb.value;
+              }
+            });
+          }
+        }
+        allusers.push(users);
+        localStorage.setItem("allusers", JSON.stringify(allusers));
+        window.location.href = "table.html";
+
+        clearForm();
+      }
+
+      function clearForm() {
+        var users = {
+          name: "",
+          email: "",
+          password: "",
+          address: "",
+          age: "",
+          gender: "",
+        };
+        for (a in users) {
+          if (a != "gender") {
+            document.getElementById(a).value = "";
+          } else if ((a = "gender")) {
+            allradiobtn.forEach((rb) => {
+              rb.checked = false;
+            });
+          }
+        }
+      }
+      function validate() {
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const passwordInput = document.getElementById("password");
+        const addressInput = document.getElementById("address");
+        const ageInput = document.getElementById("age");
+
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const password = passwordInput.value.trim();
+        const address = addressInput.value.trim();
+        const age = ageInput.value.trim();
+
+        if (name === "") {
+          nameInput.classList.add("error");
+        } else {
+          nameInput.classList.remove("error");
+        }
+
+        if (email === "" || !isValidEmail(email)) {
+          emailInput.classList.add("error");
+        } else {
+          emailInput.classList.remove("error");
+        }
+
+        if (password === "") {
+          passwordInput.classList.add("error");
+        } else {
+          passwordInput.classList.remove("error");
+        }
+
+        if (address === "") {
+          addressInput.classList.add("error");
+        } else {
+          addressInput.classList.remove("error");
+        }
+
+        if (age === "") {
+          ageInput.classList.add("error");
+        } else {
+          ageInput.classList.remove("error");
+        }
+      }
+
+      function isValidEmail(email) {
+        // Simple email validation regex (you can use a more sophisticated one)
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+      function website() {
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,401 @@
+:root {
+  --orange-color: #da722c;
+  --dark-blue-color: #023047;
+  --drak-color: #070917: --light-color:#e8f7fb;
+  --light-blue-color: #6f7dfb;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+div#container {
+  width: 100%;
+}
+.navbar {
+  background-color: #f34c4c;
+  display: flex;
+  justify-content: space-evenly;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 10px 10px 10px 4px;
+  opacity: .4;
+}
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-top: 20px;
+}
+
+.navbar li {
+  margin: 0;
+  padding: 0;
+}
+.navbar a {
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a:hover {
+  background-color: #524f4f;
+  border-radius: 10px;
+width: 100px;
+background-color: rgba(252, 246, 246, 0.694);
+  color: black;
+}
+.logo a {
+  color: #2c49da   ;
+}
+.navbar img {
+  height: 50px;
+  width: 50%; /* Adjust the width here */
+  margin: 5px 0; /* Adjust the margin if needed */
+}
+.logo {
+  position: relative;
+  left: 60px;
+  top: 10px;
+  font-size: 25px;
+}
+img#icons {
+  width: 10px;
+  height: 10px;
+  border: none;
+}
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+#image-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1530px;
+}
+#image-slider {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+.image {
+  flex: 0 0 100%;
+  height: auto;
+}
+.dot-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Style for individual slide dots */
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* Active dot style */
+.dot.active {
+  background-color: #717171;
+}
+#prev-btn,
+#next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+}
+#prev-btn {
+  left: 10px;
+}
+#next-btn {
+  right: 10px;
+}
+img {
+  width: 100%;
+  /* border: double; */
+}
+.msg {
+  display: flex;
+  margin: auto;
+  width: 250px;
+}
+h1#sena {
+  color: firebrick;
+}
+#pera::before {
+    content: '';
+    width: 26px;
+    height: 19px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAATBAMAAACTqWsLAAAAHlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC3KG9qAAAACnRSTlMAMgkYDikgJRQRFGjJKQAAAJFJREFUGNNNzrERwjAMBVAFcHJ0fIMDpSmgDhvAXQYgTOCMwAZQsjVfkou48Lsvy7JF1zob8rN9i4956Y354D0YlJDEq9GYitEiK109vMUlKwwmitFhOU/ORyPgNdodjHfSADjRibLvQcC6sq+xeESNO0bvamp8e2yVJyermb/xkYHo018gES1HupmTffOKPssfXdcREEqt1kIAAAAASUVORK5CYII=) center center/26px 19px no-repeat;
+    display: inline-block;
+    margin: 0 6px 0 0;
+    vertical-align: top;
+}
+#pera::after{
+content: '';
+width: 26px;
+height: 19px;
+background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAATBAMAAAB8awA1AAAAHlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC3KG9qAAAACnRSTlMAMwgUGCkkGw4fK5TeFwAAAI9JREFUGNNNjjEOwjAQBFdGSkjH2qCILgUPICUdkUKfwAtAiJqKGhp6fky828TFjfY85zO+DXQuqp9aCONNvJ6FkvuMinbbJPyisPRlsYFO5y6fcHeuLqx2NTw4ALueWQn9iRElybyjnZBU+UbIWGN0Kp1os5glOEWZW9gc9MoKCB6vNKYNacLhcdRPXvcGfxDxEtjE63xEAAAAAElFTkSuQmCC) center center/26px 19px no-repeat;
+display: inline-block;
+vertical-align: top;
+margin: 0 0 0 6px;
+}
+#pera{
+  text-align: center;
+}
+.news {
+  margin-left: 300px;
+}
+.news {
+  display: flex;
+  width: 850px;
+}
+a#Videos {
+  margin: auto;
+  width: 200px;
+}
+img#video {
+  border: inset;
+}
+img#video:hover{
+  width: 100px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+}
+#gallerys {
+  width: 300px;
+  margin: auto;
+  border: ridge;
+}
+#gallerys:hover{
+  width: 350px;
+  cursor: pointer;
+  background-image: url("https://www.telugu360.com/wp-content/uploads/2018/08/Is-this-the-list-of-leaders-joining-Janasena.jpg");
+}
+.title{
+  text-align: center;
+}
+.links{
+  background: linear-gradient(135deg,#cb2229 0,#673239 100%);
+  width:100%;
+  height: 400px;
+ margin-top: 20px; 
+}
+.heading>h1 {
+  text-align: center;
+  color: white;
+}
+
+#apps {
+  width: 180px;
+  position: relative;
+  left: 400px;
+  border: none;
+  bottom: 23px;
+}
+h2.app_1{
+  margin-left: 400px;
+  background-color: darksalmon;
+  width: 200px;
+}
+.jsp_app {
+  background-color: rgb(247, 241, 241);
+  width: 112px;
+  height: 30px;
+  position: relative;
+  bottom: 240px;
+  left: 430px;
+  border-radius: 5px;
+  
+}
+.jsp_google {
+  width: 15px;
+  border: none;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.jsp_apple{
+  background-color: rgb(247, 241, 241);
+  width: 112px;
+  height: 30px;
+  position: relative;
+  bottom: 200px;
+  left: 430px;
+  border-radius: 5px;
+  
+}
+.jsp_applestore{
+  width: 15px;
+  border: none;
+  margin-top: 5px;
+}
+.insurence {
+  width: 225px;
+  margin-left: 260px;
+  position: relative;
+  bottom: 120px;
+  border: inset;
+}
+.membership {
+  width: 485px;
+  float: right;
+  position: relative;
+  bottom: 425px;
+}
+h2.asthra {
+  background: #9d988969;
+  width: 200px;
+  height: 28px;
+}
+.jsp_app2{
+width: 180px;
+border: none;
+position: relative;
+bottom: 23px;
+}
+.jsp_app_2playstore {
+  background: white;
+  width: 115px;
+  height: 28px;
+  border-radius: 5px;
+  position: relative;
+  bottom: 230px;
+  left: 29px;
+}
+.jsp_app_2applestore{
+  background: white;
+  width: 115px;
+  height: 28px;
+  border-radius: 5px;
+  position: relative;
+  bottom: 190px;
+  left: 29px;
+}
+a{
+  text-decoration: none ;
+}
+.footer {
+  width: 950px;
+  display: flex;
+  margin: auto;
+  position: relative;
+  left: 220px;
+  top: 25px;
+}
+.youtube {
+  width: 40px;
+  border: 1px solid;
+  background-color: rgb(241, 231, 231);
+  border-radius: 100px;
+  margin: 1px;
+}
+.instagram {
+  width: 40px;
+  border: 1px solid;
+  background-color: rgb(244, 165, 165);
+  border-radius: 100px;
+  margin: 1px;
+}
+.twitter {
+  width: 40px;
+  border: 1px solid;
+  background-color: rgb(255, 254, 254);
+  border-radius: 100px;
+  margin: 1px;
+}
+.social_media {
+  width: 224px;
+  position: relative;
+  top: 50px;
+  left: 690px;
+}
+marquee {
+  color: orange;
+  font-size: 25px;
+  background-color: #4343425c;
+}
+@media screen and (min-width:320px) and (max-width:767px) {
+  div#container {
+    width: 85%;
+} 
+.navbar{
+  width: 1245px;
+}
+  #image-container{
+    width: 1245px;
+
+  }
+  .msg {
+    display: flex;
+    width: 0;
+    float: right;
+    position: absolute;
+    left: 450px;
+}
+#pera {
+  text-align: center;
+  position: relative;
+  top: 60px;
+  width: 1190px;
+}
+.news {
+  display: flex;
+  width: 875px;
+  margin-left: 185px;
+}
+.title {
+  text-align: center;
+  width: 1220px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  margin-left: 180px;
+}
+.links {
+    background: linear-gradient(135deg,#f32900 0,#8c1e2d 100%);
+    width: 1235px;
+    height: 400px;
+    margin-top: 20px;
+}
+.link {
+  position: relative;
+  right: 150px;
+}
+.app2 {
+  position: relative;
+  left: 128px;
+}
+.footer {
+  left: 190px;
+}
+.social_media {
+  left: 620px;
+}
+marquee {
+    display: none;
+}
+.heading>h1 {
+  text-align: center;
+  color: white;
+  margin-right: 170px;
+}
+  
+}
