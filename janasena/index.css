@@ -333,7 +333,7 @@ marquee {
   font-size: 25px;
   background-color: #4343425c;
 }
-@media screen and (min-width:320px) and (max-width:767px) {
+@media screen and (min-width:320px) and (max-width:1434px) {
   div#container {
     margin: auto;
     width: 100%;
@@ -385,11 +385,11 @@ img#video {
 .gallery {
   grid-template-columns: auto auto;
   gap: 10px;
-  margin: auto;
+  /* margin: auto; */
   width: 800px;
 }
   .links {
-    width: 810px;
+    width: 800px;
 }
 .app {
   position: relative;
