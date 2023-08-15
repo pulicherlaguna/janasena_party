@@ -20,7 +20,7 @@ div#container {
   width: 100%;
   z-index: 1000;
   box-shadow: 10px 10px 10px 4px;
-  opacity: .4;
+  opacity: .9;
 }
 .navbar ul {
   list-style: none;
@@ -42,11 +42,11 @@ div#container {
   text-decoration: none;
 }
 .navbar a:hover {
-  background-color: #524f4f;
-  border-radius: 10px;
-width: 100px;
-background-color: rgba(252, 246, 246, 0.694);
-  color: black;
+  /* background-color: #524f4f; */
+  /* border-radius: 10px; */
+/* width: 100px; */
+/* background-color: rgba(252, 246, 246, 0.694); */
+  color: rgb(225, 216, 216);
 }
 .logo a {
   color: #2c49da   ;
@@ -167,12 +167,19 @@ a#Videos {
   margin: auto;
   width: 200px;
 }
+a#Videos:hover{
+ color: rgb(250, 248, 243);
+}
 img#video {
   border: inset;
 }
-img#video:hover{
-  width: 100px;
+#video_123{
+  width: 185px; 
+  margin-left: 10px
 }
+/* img#video:hover{
+  width: 100px;
+} */
 .gallery {
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -186,7 +193,6 @@ img#video:hover{
 #gallerys:hover{
   width: 350px;
   cursor: pointer;
-  background-image: url("https://www.telugu360.com/wp-content/uploads/2018/08/Is-this-the-list-of-leaders-joining-Janasena.jpg");
 }
 .title{
   text-align: center;
@@ -245,13 +251,6 @@ h2.app_1{
   border: none;
   margin-top: 5px;
 }
-.insurence {
-  width: 225px;
-  margin-left: 260px;
-  position: relative;
-  bottom: 120px;
-  border: inset;
-}
 .membership {
   width: 485px;
   float: right;
@@ -287,8 +286,12 @@ bottom: 23px;
   bottom: 190px;
   left: 29px;
 }
-a{
-  text-decoration: none ;
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  color: rgb(127, 2, 2);
 }
 .footer {
   width: 950px;
@@ -332,49 +335,73 @@ marquee {
 }
 @media screen and (min-width:320px) and (max-width:767px) {
   div#container {
-    width: 85%;
-} 
-.navbar{
-  width: 1245px;
+    margin: auto;
+    width: 100%;
+    margin-left: 100px;
 }
-  #image-container{
-    width: 1245px;
-
-  }
+.navbar {
+  width: 802px;
+}
+.navbar ul {
+  gap: 10px;
+}
+.logo{
+  display: none;
+}
+#image-container {
+  width: 802px;
+}
   .msg {
-    display: flex;
-    width: 0;
-    float: right;
-    position: absolute;
-    left: 450px;
+    margin-left: 260px;
 }
 #pera {
-  text-align: center;
-  position: relative;
-  top: 60px;
-  width: 1190px;
+  width: 780px;
 }
 .news {
-  display: flex;
-  width: 875px;
-  margin-left: 185px;
+  margin: auto;
+  display: block;
+  margin-left: 100px;
+}
+img#video {
+width: 487px;
+margin-left: 10px;
+}
+a#Videos {
+  margin: auto;
+  width: 200px;
+  padding: 17px 6px 40px 40px;
+}
+img#video {
+  margin-left: 0;
+  width: 500px;
+}
+#video_123{
+  width: 500px;
+  margin-left: 0;
 }
 .title {
-  text-align: center;
-  width: 1220px;
+  width: 810px;
 }
 .gallery {
-  display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   gap: 10px;
-  margin-left: 180px;
+  margin: auto;
+  width: 800px;
 }
-.links {
-    background: linear-gradient(135deg,#f32900 0,#8c1e2d 100%);
-    width: 1235px;
-    height: 400px;
-    margin-top: 20px;
+  .links {
+    width: 810px;
 }
+.app {
+  position: relative;
+  right: 100px;
+} 
+.jsp_app {
+  left: 327px;
+}
+.jsp_apple {
+  left: 327px;
+}
+
 .link {
   position: relative;
   right: 150px;
@@ -384,18 +411,21 @@ marquee {
   left: 128px;
 }
 .footer {
-  left: 190px;
+  /* width: 950px; */
+  display: block;
+  margin: auto;
+  left: 220px;
+  top: 25px;
 }
 .social_media {
-  left: 620px;
+  width: 224px;
+  left: 200px;
 }
 marquee {
     display: none;
 }
 .heading>h1 {
   text-align: center;
-  color: white;
-  margin-right: 170px;
 }
   
 }
